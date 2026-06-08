@@ -1,6 +1,6 @@
 # Your First API
 
-`[Entry]`
+
 
 Build a minimal REST API for managing products. Every line explained.
 

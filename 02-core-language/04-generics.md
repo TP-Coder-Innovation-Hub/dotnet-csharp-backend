@@ -1,6 +1,6 @@
 # Generics
 
-`[Mid]`
+
 
 ## The Problem Generics Solve
 
@@ -30,6 +30,8 @@ var strBox = new Box<string> { Value = "hello" };
 
 var number = intBox.Value; // No cast. Type is int.
 ```
+
+> 🖼️ **[IMAGE_PLACEHOLDER]** — C# generics type substitution Box int Box string
 
 ## Generic Methods
 

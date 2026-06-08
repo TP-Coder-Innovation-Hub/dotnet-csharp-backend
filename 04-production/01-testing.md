@@ -1,6 +1,6 @@
 # Testing
 
-`[Mid]`
+
 
 ## The Testing Strategy
 

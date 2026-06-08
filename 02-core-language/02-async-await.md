@@ -1,6 +1,6 @@
 # Async/Await
 
-`[Mid]`
+
 
 ## Why Async Matters
 
@@ -29,6 +29,8 @@ Every async method returns `Task` (no result) or `Task<T>` (with result). The `a
 ## The State Machine
 
 When you write `async`, the C# compiler generates a state machine struct. It tracks which `await` point the method is at and resumes execution when the awaited task completes.
+
+> 🖼️ **[IMAGE_PLACEHOLDER]** — C# async await state machine thread pool I/O completion
 
 ```csharp
 // What you write:

@@ -22,36 +22,36 @@ dotnet-csharp-backend/
 ├── README.md                           # Navigation table + objectives
 ├── AGENTS.md                           # This file
 ├── 00-foundations/
-│   ├── 01-what-is-programming.md       # [Entry] Instructions, data, output
-│   ├── 02-paradigms.md                 # [Entry][Mid] OOP-first, multi-paradigm
-│   ├── 03-sequential-decision-iteration.md # [Entry] Three control structures
-│   ├── 04-compiler-vs-interpreter.md   # [Entry] C# -> IL -> CLR JIT
-│   ├── 05-what-is-csharp-dotnet.md     # [Entry] History, open source, cross-platform
-│   └── 06-why-dotnet-why-not-x.md      # [Mid] .NET vs Java/Go/Python/Node
+│   ├── 01-what-is-programming.md       #  Instructions, data, output
+│   ├── 02-paradigms.md                 #  OOP-first, multi-paradigm
+│   ├── 03-sequential-decision-iteration.md #  Three control structures
+│   ├── 04-compiler-vs-interpreter.md   #  C# -> IL -> CLR JIT
+│   ├── 05-what-is-csharp-dotnet.md     #  History, open source, cross-platform
+│   └── 06-why-dotnet-why-not-x.md      #  .NET vs Java/Go/Python/Node
 ├── 01-first-code/
-│   ├── 01-setup.md                     # [Entry] SDK, editor, dotnet new/run
-│   ├── 02-variables-and-types.md       # [Entry] Strong typing, value vs reference
-│   ├── 03-control-flow.md              # [Entry] if/else, switch, loops
-│   ├── 04-methods.md                   # [Entry] Params, out, ref, expression-bodied
-│   └── 05-classes-and-records.md       # [Entry] class, record, struct, interface
+│   ├── 01-setup.md                     #  SDK, editor, dotnet new/run
+│   ├── 02-variables-and-types.md       #  Strong typing, value vs reference
+│   ├── 03-control-flow.md              #  if/else, switch, loops
+│   ├── 04-methods.md                   #  Params, out, ref, expression-bodied
+│   └── 05-classes-and-records.md       #  class, record, struct, interface
 ├── 02-core-language/
-│   ├── 01-linq.md                      # [Mid] The killer feature, deferred execution
-│   ├── 02-async-await.md               # [Mid] Task, ValueTask, state machine
-│   ├── 03-error-handling.md            # [Entry] try/catch/finally, custom exceptions
-│   ├── 04-generics.md                  # [Mid] Type parameters, constraints
-│   └── 05-dependency-injection.md      # [Mid] Built-in DI, service lifetimes
+│   ├── 01-linq.md                      #  The killer feature, deferred execution
+│   ├── 02-async-await.md               #  Task, ValueTask, state machine
+│   ├── 03-error-handling.md            #  try/catch/finally, custom exceptions
+│   ├── 04-generics.md                  #  Type parameters, constraints
+│   └── 05-dependency-injection.md      #  Built-in DI, service lifetimes
 ├── 03-backend-fundamentals/
-│   ├── 01-http-and-web-servers.md      # [Entry] HTTP for backend devs
-│   ├── 02-rest-api-design.md           # [Entry] REST principles, status codes
-│   ├── 03-your-first-api.md            # [Entry] Minimal APIs step by step
-│   ├── 04-database-access.md           # [Mid] EF Core: code-first, migrations
-│   └── 05-authentication.md            # [Mid] JWT, ASP.NET Identity
+│   ├── 01-http-and-web-servers.md      #  HTTP for backend devs
+│   ├── 02-rest-api-design.md           #  REST principles, status codes
+│   ├── 03-your-first-api.md            #  Minimal APIs step by step
+│   ├── 04-database-access.md           #  EF Core: code-first, migrations
+│   └── 05-authentication.md            #  JWT, ASP.NET Identity
 ├── 04-production/
-│   ├── 01-testing.md                   # [Mid] xUnit, EF Core InMemory
-│   ├── 02-logging.md                   # [Mid] Structured logging, Serilog
-│   └── 03-deployment.md                # [Senior] Docker, Native AOT
+│   ├── 01-testing.md                   #  xUnit, EF Core InMemory
+│   ├── 02-logging.md                   #  Structured logging, Serilog
+│   └── 03-deployment.md                #  Docker, Native AOT
 └── 05-capstone/
-    └── README.md                       # [Mid] Enterprise REST API project spec
+    └── README.md                       #  Enterprise REST API project spec
 ```
 
 ## How to Help
@@ -63,7 +63,7 @@ dotnet-csharp-backend/
 - When reviewing code, check for: async void, DbContext lifetime, N+1 queries, blocking on async
 - Suggest `dotnet test` for running tests, and xUnit as the default test framework
 - For NuGet packages, verify compatibility with .NET 9 before recommending
-- Use the `[Entry]`, `[Mid]`, `[Senior]` badges when creating new content to indicate difficulty level
+- Use the , ,  badges when creating new content to indicate difficulty level
 - Reference official Microsoft documentation (learn.microsoft.com) as the authoritative source
 
 ## How NOT to Help
@@ -131,7 +131,7 @@ dotnet-csharp-backend/
 1. Ensure all code examples compile against .NET 9
 2. Verify API references against [learn.microsoft.com](https://learn.microsoft.com/dotnet)
 3. Keep each file between 200-500 words. Short, concise, direct
-4. Use `[Entry]`, `[Mid]`, `[Senior]` badges. Include runnable code examples
+4. Use , ,  badges. Include runnable code examples
 5. Prefer minimal APIs and modern C# features
 6. Run `dotnet build` and `dotnet test` on any sample projects before committing
 7. Prefer official Microsoft documentation links over blog posts

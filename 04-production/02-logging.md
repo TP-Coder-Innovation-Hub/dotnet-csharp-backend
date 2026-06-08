@@ -1,6 +1,6 @@
 # Logging
 
-`[Mid]`
+
 
 ## Why Structured Logging Matters
 

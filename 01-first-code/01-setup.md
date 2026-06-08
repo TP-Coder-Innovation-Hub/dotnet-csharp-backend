@@ -1,6 +1,6 @@
 # Setup
 
-`[Entry]`
+
 
 ## Install the .NET SDK
 

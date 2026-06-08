@@ -1,6 +1,6 @@
 # LINQ
 
-`[Mid]`
+
 
 ## Why LINQ Matters
 

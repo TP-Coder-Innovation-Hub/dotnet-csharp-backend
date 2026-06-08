@@ -1,6 +1,6 @@
 # Authentication
 
-`[Mid]`
+
 
 ## Authentication vs Authorization
 

@@ -1,6 +1,6 @@
 # What Is C# and .NET
 
-`[Entry]`
+
 
 ## The Language and the Platform
 
@@ -25,6 +25,8 @@ You write C#. You build on .NET.
 | 2022 | .NET 7. C# 11. Performance leadership in web benchmarks. |
 | 2024 | .NET 9 (LTS). C# 13. Mature, fast, cross-platform. |
 | 2025 | .NET 10 approaching. Continued performance and language evolution. |
+
+> 🖼️ **[IMAGE_PLACEHOLDER]** — dotnet history timeline 2000 to 2026 open source shift
 
 ## Anders Hejlsberg
 

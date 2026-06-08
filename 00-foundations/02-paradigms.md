@@ -1,6 +1,6 @@
 # Programming Paradigms
 
-`[Entry]` `[Mid]`
+ 
 
 ## What Is a Paradigm
 
@@ -66,6 +66,8 @@ C# adopted many functional ideas over the years: LINQ, lambda expressions, patte
 ## How C# Evolved
 
 C# started in 2000 as a Java-like OOP language for the Windows-only .NET Framework. Each version added paradigms:
+
+> 🖼️ **[IMAGE_PLACEHOLDER]** — C# paradigm evolution timeline OOP functional async
 
 | Version | Year | Key Addition | Paradigm Influence |
 |---------|------|--------------|-------------------|

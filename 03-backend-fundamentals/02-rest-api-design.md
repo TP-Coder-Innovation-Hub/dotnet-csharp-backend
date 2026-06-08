@@ -1,6 +1,6 @@
 # REST API Design
 
-`[Entry]`
+
 
 ## What Is REST
 

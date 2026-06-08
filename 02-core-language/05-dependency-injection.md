@@ -1,6 +1,6 @@
 # Dependency Injection
 
-`[Mid]`
+
 
 ## What Is Dependency Injection
 
@@ -13,6 +13,8 @@ public class OrderService
     private readonly AppDbContext _db = new(); // Creates its own dependency
     private readonly EmailSender _email = new(); // Cannot swap or test
 }
+
+> 🖼️ **[IMAGE_PLACEHOLDER]** — without DI tight coupling vs with DI loose coupling diagram
 
 // With DI -- dependencies provided from outside
 public class OrderService
@@ -71,6 +73,8 @@ app.MapPost("/orders", async (CreateOrderCommand cmd, IOrderService service) =>
 | **Transient** | Every time it is requested | Lightweight, stateless services | Email sender, validators |
 | **Scoped** | Once per HTTP request | Database context, repositories | DbContext, unit of work |
 | **Singleton** | Once for the application | Caches, configuration, expensive resources | Redis client, settings |
+
+> 🖼️ **[IMAGE_PLACEHOLDER]** — dependency injection container transient scoped singleton lifetimes
 
 ```csharp
 builder.Services.AddTransient<IValidator<Order>, OrderValidator>();  // New instance each time

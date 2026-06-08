@@ -1,6 +1,6 @@
 # HTTP and Web Servers
 
-`[Entry]`
+
 
 ## How the Web Works for Backend Developers
 

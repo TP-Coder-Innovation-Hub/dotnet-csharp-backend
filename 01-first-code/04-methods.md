@@ -1,6 +1,6 @@
 # Methods
 
-`[Entry]`
+
 
 ## Basic Syntax
 

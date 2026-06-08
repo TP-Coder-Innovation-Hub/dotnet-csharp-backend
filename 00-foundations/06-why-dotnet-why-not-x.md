@@ -1,8 +1,10 @@
 # Why .NET, Why Not X
 
-`[Mid]`
+
 
 No technology is the best choice for every situation. Here is how .NET compares to its main competitors for backend development.
+
+> 🖼️ **[IMAGE_PLACEHOLDER]** — dotnet vs Java vs Go vs Python vs Node comparison
 
 ## .NET vs Java (Spring Boot)
 

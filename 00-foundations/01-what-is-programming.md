@@ -1,6 +1,6 @@
 # What Is Programming
 
-`[Entry]`
+
 
 ## The Core Idea
 

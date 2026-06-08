@@ -1,6 +1,6 @@
 # Deployment
 
-`[Senior]`
+
 
 ## Docker
 

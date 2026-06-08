@@ -1,6 +1,6 @@
 # Database Access with EF Core
 
-`[Mid]`
+
 
 ## What Is EF Core
 

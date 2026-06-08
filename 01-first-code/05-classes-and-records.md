@@ -1,6 +1,6 @@
 # Classes and Records
 
-`[Entry]`
+
 
 ## class
 

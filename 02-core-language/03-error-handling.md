@@ -1,6 +1,6 @@
 # Error Handling
 
-`[Entry]`
+
 
 ## try / catch / finally
 

@@ -1,6 +1,6 @@
 # Compiler vs Interpreter
 
-`[Entry]`
+
 
 ## The Two Approaches
 

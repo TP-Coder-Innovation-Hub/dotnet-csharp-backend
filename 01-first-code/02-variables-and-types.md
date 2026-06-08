@@ -1,6 +1,6 @@
 # Variables and Types
 
-`[Entry]`
+
 
 ## Strong Typing
 
