@@ -31,7 +31,12 @@ var strBox = new Box<string> { Value = "hello" };
 var number = intBox.Value; // No cast. Type is int.
 ```
 
-> 🖼️ **[IMAGE_PLACEHOLDER]** — C# generics type substitution Box int Box string
+```mermaid
+graph TD
+    G["Box&lt;T&gt;"] --> GI["Box&lt;int&gt;\nT → int"]
+    G --> GS["Box&lt;string&gt;\nT → string"]
+    G --> GD["Box&lt;decimal&gt;\nT → decimal"]
+```
 
 ## Generic Methods
 

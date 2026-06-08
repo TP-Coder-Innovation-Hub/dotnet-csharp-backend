@@ -67,7 +67,13 @@ C# adopted many functional ideas over the years: LINQ, lambda expressions, patte
 
 C# started in 2000 as a Java-like OOP language for the Windows-only .NET Framework. Each version added paradigms:
 
-> 🖼️ **[IMAGE_PLACEHOLDER]** — C# paradigm evolution timeline OOP functional async
+```mermaid
+graph LR
+    C1["C# 1.0\nOOP"] --> C2["C# 3.0\nLINQ (FP)"]
+    C2 --> C3["C# 5.0\nasync/await"]
+    C3 --> C4["C# 8.0\nPattern matching"]
+    C4 --> C5["C# 12+\nPrimary constructors\nRecords"]
+```
 
 | Version | Year | Key Addition | Paradigm Influence |
 |---------|------|--------------|-------------------|

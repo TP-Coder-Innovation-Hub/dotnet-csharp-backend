@@ -4,7 +4,18 @@
 
 No technology is the best choice for every situation. Here is how .NET compares to its main competitors for backend development.
 
-> 🖼️ **[IMAGE_PLACEHOLDER]** — dotnet vs Java vs Go vs Python vs Node comparison
+```mermaid
+flowchart TD
+    Start[Enterprise + Microsoft?] -->|Yes| DN[Choose .NET]
+    Start -->|No| Q1{Enterprise + Java ecosystem?}
+    Q1 -->|Yes| J[Choose Java]
+    Q1 -->|No| Q2{Simple + concurrent?}
+    Q2 -->|Yes| GO[Choose Go]
+    Q2 -->|No| Q3{Fast iteration + ML?}
+    Q3 -->|Yes| PY[Choose Python]
+    Q3 -->|No| Q4{JS ecosystem?}
+    Q4 -->|Yes| ND[Choose Node/TS]
+```
 
 ## .NET vs Java (Spring Boot)
 

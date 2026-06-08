@@ -30,7 +30,19 @@ Every async method returns `Task` (no result) or `Task<T>` (with result). The `a
 
 When you write `async`, the C# compiler generates a state machine struct. It tracks which `await` point the method is at and resumes execution when the awaited task completes.
 
-> 🖼️ **[IMAGE_PLACEHOLDER]** — C# async await state machine thread pool I/O completion
+```mermaid
+sequenceDiagram
+    participant T1 as Thread 1
+    participant SM as State Machine
+    participant TP as Thread Pool
+    participant IO as I/O Operation
+    T1->>SM: await FetchAsync()
+    SM->>IO: Start I/O
+    Note over T1: Thread 1 FREE — serves other requests
+    IO-->>TP: I/O Complete callback
+    TP->>SM: Resume
+    SM-->>T1: Result ready
+```
 
 ```csharp
 // What you write:

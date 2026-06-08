@@ -14,7 +14,17 @@ public class OrderService
     private readonly EmailSender _email = new(); // Cannot swap or test
 }
 
-> 🖼️ **[IMAGE_PLACEHOLDER]** — without DI tight coupling vs with DI loose coupling diagram
+```mermaid
+graph LR
+    subgraph "Without DI — Tight Coupling"
+        A1["OrderService"] -->|creates| B1["new SqlRepository()"]
+    end
+    subgraph "With DI — Loose Coupling"
+        A2["OrderService"] -->|uses interface| I["IRepository"]
+        I -->|injected| B2["SqlRepository"]
+        I -->|or swapped| B3["MongoRepository"]
+    end
+```
 
 // With DI -- dependencies provided from outside
 public class OrderService
@@ -74,7 +84,20 @@ app.MapPost("/orders", async (CreateOrderCommand cmd, IOrderService service) =>
 | **Scoped** | Once per HTTP request | Database context, repositories | DbContext, unit of work |
 | **Singleton** | Once for the application | Caches, configuration, expensive resources | Redis client, settings |
 
-> 🖼️ **[IMAGE_PLACEHOLDER]** — dependency injection container transient scoped singleton lifetimes
+```mermaid
+graph TD
+    subgraph "Transient"
+        T1["Request 1 → new instance"]
+        T2["Request 2 → new instance"]
+    end
+    subgraph "Scoped"
+        S1["HTTP Request A → same instance"]
+        S2["HTTP Request B → different instance"]
+    end
+    subgraph "Singleton"
+        SI["All requests → ONE instance"]
+    end
+```
 
 ```csharp
 builder.Services.AddTransient<IValidator<Order>, OrderValidator>();  // New instance each time
