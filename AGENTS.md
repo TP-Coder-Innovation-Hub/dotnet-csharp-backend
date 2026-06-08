@@ -2,9 +2,9 @@
 
 ## Context
 
-This repository is part of the TP-Coder-Innovation-Hub educational platform. It serves as the entry point for the ".NET C# Backend Developer" learning path. The content targets developers learning or improving their .NET backend skills, from entry-level through senior.
+This repository is part of the TP-Coder-Innovation-Hub educational platform. It serves as the ".NET C# Backend Developer" learning path, structured as a directory-per-topic guide from foundations through production deployment.
 
-The primary content is a comprehensive guide (`README.md`) covering .NET fundamentals, C# language features, ASP.NET Core, EF Core, and the broader ecosystem.
+The content targets developers learning or improving their .NET backend skills, from entry-level through senior.
 
 ## Audience
 
@@ -15,115 +15,124 @@ The primary content is a comprehensive guide (`README.md`) covering .NET fundame
 
 Assume readers have basic programming knowledge (variables, loops, functions, HTTP) but may be new to C# or .NET specifically.
 
+## Repository Structure
+
+```text
+dotnet-csharp-backend/
+├── README.md                           # Navigation table + objectives
+├── AGENTS.md                           # This file
+├── 00-foundations/
+│   ├── 01-what-is-programming.md       # [Entry] Instructions, data, output
+│   ├── 02-paradigms.md                 # [Entry][Mid] OOP-first, multi-paradigm
+│   ├── 03-sequential-decision-iteration.md # [Entry] Three control structures
+│   ├── 04-compiler-vs-interpreter.md   # [Entry] C# -> IL -> CLR JIT
+│   ├── 05-what-is-csharp-dotnet.md     # [Entry] History, open source, cross-platform
+│   └── 06-why-dotnet-why-not-x.md      # [Mid] .NET vs Java/Go/Python/Node
+├── 01-first-code/
+│   ├── 01-setup.md                     # [Entry] SDK, editor, dotnet new/run
+│   ├── 02-variables-and-types.md       # [Entry] Strong typing, value vs reference
+│   ├── 03-control-flow.md              # [Entry] if/else, switch, loops
+│   ├── 04-methods.md                   # [Entry] Params, out, ref, expression-bodied
+│   └── 05-classes-and-records.md       # [Entry] class, record, struct, interface
+├── 02-core-language/
+│   ├── 01-linq.md                      # [Mid] The killer feature, deferred execution
+│   ├── 02-async-await.md               # [Mid] Task, ValueTask, state machine
+│   ├── 03-error-handling.md            # [Entry] try/catch/finally, custom exceptions
+│   ├── 04-generics.md                  # [Mid] Type parameters, constraints
+│   └── 05-dependency-injection.md      # [Mid] Built-in DI, service lifetimes
+├── 03-backend-fundamentals/
+│   ├── 01-http-and-web-servers.md      # [Entry] HTTP for backend devs
+│   ├── 02-rest-api-design.md           # [Entry] REST principles, status codes
+│   ├── 03-your-first-api.md            # [Entry] Minimal APIs step by step
+│   ├── 04-database-access.md           # [Mid] EF Core: code-first, migrations
+│   └── 05-authentication.md            # [Mid] JWT, ASP.NET Identity
+├── 04-production/
+│   ├── 01-testing.md                   # [Mid] xUnit, EF Core InMemory
+│   ├── 02-logging.md                   # [Mid] Structured logging, Serilog
+│   └── 03-deployment.md                # [Senior] Docker, Native AOT
+└── 05-capstone/
+    └── README.md                       # [Mid] Enterprise REST API project spec
+```
+
 ## How to Help
 
-- When asked to explain .NET concepts, reference the specific sections in README.md and expand with practical examples
+- Reference the specific file when explaining .NET concepts and expand with practical examples
 - Provide code examples using .NET 9+ and C# 13 features (primary constructors, collection expressions, pattern matching, records)
 - Use ASP.NET Core minimal APIs as the default approach for new code examples unless the user specifically asks for controllers
 - Prefer EF Core for data access examples; mention Dapper only when raw SQL performance is the explicit concern
-- When reviewing code, check for the common pitfalls documented in Section 8 of README.md (async void, DbContext lifetime, N+1 queries, blocking on async)
-- Suggest `dotnet test` for running tests, and xUnit as the default test framework unless the project uses another
+- When reviewing code, check for: async void, DbContext lifetime, N+1 queries, blocking on async
+- Suggest `dotnet test` for running tests, and xUnit as the default test framework
 - For NuGet packages, verify compatibility with .NET 9 before recommending
 - Use the `[Entry]`, `[Mid]`, `[Senior]` badges when creating new content to indicate difficulty level
-- Include Mermaid diagrams for architectural concepts
 - Reference official Microsoft documentation (learn.microsoft.com) as the authoritative source
 
 ## How NOT to Help
 
-- Do not recommend .NET Framework (the legacy Windows-only version) unless the user explicitly asks about it. Always default to .NET 9+ (the modern cross-platform runtime)
-- Do not suggest third-party DI containers (Autofac, etc.) unless the user has a specific need that the built-in container cannot meet
-- Do not provide code examples using the old `Startup.cs` pattern unless asked. Modern .NET uses the top-level `Program.cs` pattern
+- Do not recommend .NET Framework (the legacy Windows-only version). Always default to .NET 9+
+- Do not suggest third-party DI containers (Autofac, etc.) unless the user has a specific need
+- Do not provide code examples using the old `Startup.cs` pattern. Modern .NET uses top-level `Program.cs`
 - Do not recommend the Repository pattern on top of EF Core by default. EF Core already implements Unit of Work and Repository patterns
 - Do not suggest `DataTable`, `DataSet`, or ADO.NET directly unless the user explicitly needs maximum raw SQL performance
-- Do not use synchronous I/O methods (`ReadAllText`, `FirstOrDefault` without `Async`, etc.) in ASP.NET Core examples
-- Do not recommend Visual Studio as the only option. Mention VS Code with the C# Dev Kit and JetBrains Rider as alternatives
-- Do not provide examples that mix concerns (business logic in controllers, database access in middleware, etc.)
+- Do not use synchronous I/O methods in ASP.NET Core examples
+- Do not recommend Visual Studio as the only option. Mention VS Code with C# Dev Kit and JetBrains Rider
+- Do not provide examples that mix concerns (business logic in controllers, database access in middleware)
 
 ## Key Concepts
 
-These are the foundational ideas that should be reinforced throughout all content:
-
-1. **The CLR runtime** -- JIT compilation, garbage collection, async state machine. Developers should understand what their code compiles to and how it runs.
-2. **LINQ as a first-class tool** -- Not just for databases. LINQ is the idiomatic way to transform and query data in C#.
-3. **Async/await everywhere** -- ASP.NET Core is async throughout. Synchronous I/O in request handlers causes thread pool starvation.
-4. **Built-in dependency injection** -- Scoped, Singleton, Transient lifetimes and when each is appropriate. No third-party containers needed for most projects.
-5. **Minimal APIs as the default** -- Less ceremony, more readable, fully featured. Controllers are valid but should not be the default recommendation.
-6. **EF Core as the standard ORM** -- Code-first, migrations, LINQ-to-SQL translation. Understand tracking vs no-tracking, N+1 queries, and compiled queries.
-7. **Native AOT for specific scenarios** -- Not for everything. Cold-start-sensitive serverless and edge deployments. Tradeoffs: no runtime reflection, larger binary sizes.
-8. **Testing with `dotnet test`** -- xUnit for unit tests, `WebApplicationFactory` for integration tests, in-memory databases for EF Core test scenarios.
+1. **The CLR runtime** -- JIT compilation, garbage collection, async state machine
+2. **LINQ as a first-class tool** -- Not just for databases. The idiomatic way to transform and query data
+3. **Async/await everywhere** -- ASP.NET Core is async throughout. Synchronous I/O causes thread pool starvation
+4. **Built-in dependency injection** -- Scoped, Singleton, Transient lifetimes
+5. **Minimal APIs as the default** -- Less ceremony, more readable, fully featured
+6. **EF Core as the standard ORM** -- Code-first, migrations, LINQ-to-SQL translation
+7. **Native AOT for specific scenarios** -- Cold-start-sensitive serverless, edge deployments
+8. **Testing with xUnit** -- Unit tests, `WebApplicationFactory` for integration tests
 
 ## .NET Guidelines (2026)
 
 ### Runtime and Language
 
-- **Target framework:** .NET 9 (LTS) or .NET 10 (current) -- use `net9.0` or `net10.0` in project files
+- **Target framework:** .NET 9 (LTS) or .NET 10 -- use `net9.0` or `net10.0`
 - **Language version:** C# 13 -- enabled by default when targeting .NET 9+
-- **Nullable reference types:** Enabled by default. All new code should use nullable reference types (`#nullable enable`)
-- **Implicit usings:** Enabled. `<ImplicitUsings>enable</ImplicitUsings>` in project file
+- **Nullable reference types:** Enabled by default (`#nullable enable`)
+- **Implicit usings:** Enabled (`<ImplicitUsings>enable</ImplicitUsings>`)
 
 ### ASP.NET Core
 
-- **Minimal APIs** for new projects. Use `MapGet`, `MapPost`, `MapPut`, `MapDelete` with lambda expressions or method groups
-- **Top-level statements** in `Program.cs`. No `Startup.cs`, no `class Program`, no `static void Main`
-- **Built-in OpenAPI support** in .NET 9+ (`Microsoft.AspNetCore.OpenApi`). No need for Swashbuckle in new projects
+- **Minimal APIs** for new projects. `MapGet`, `MapPost`, `MapPut`, `MapDelete`
+- **Top-level statements** in `Program.cs`. No `Startup.cs`
+- **Built-in OpenAPI support** in .NET 9+ (`Microsoft.AspNetCore.OpenApi`)
 - **Health checks** via `builder.Services.AddHealthChecks()` and `app.MapHealthChecks("/health")`
-- **Structured logging** with `ILogger<T>` injected via DI. Use message templates, not string interpolation: `logger.LogInformation("Order {OrderId} created for user {UserId}", orderId, userId)`
+- **Structured logging** with `ILogger<T>`. Message templates, not string interpolation
 
 ### Entity Framework Core
 
-- **EF Core 9** (`Microsoft.EntityFrameworkCore` 9.x) for .NET 9 projects
+- **EF Core 9** for .NET 9 projects
 - **Code-first with migrations** as the default approach
 - **`AsNoTracking()`** for all read-only queries
-- **`AsSplitQuery()`** when using `Include` with multiple collections to avoid Cartesian explosion
-- **PostgreSQL** (`Npgsql.EntityFrameworkCore.PostgreSQL`) as the recommended database for new projects, unless the team has strong SQL Server expertise
-- **Connection strings** stored in `appsettings.json` for development, environment variables or secret management for production
+- **`AsSplitQuery()`** when using `Include` with multiple collections
+- **PostgreSQL** (`Npgsql.EntityFrameworkCore.PostgreSQL`) as the recommended database
 
 ### Testing
 
 - **xUnit** as the default test framework
-- **`FluentAssertions`** or standard xUnit assertions based on project preference
 - **`WebApplicationFactory<Program>`** for integration tests
 - **`dotnet test`** to run all tests
-- **Test project naming:** `{ProjectName}.Tests` or `{ProjectName}.IntegrationTests`
-- Run tests before committing: `dotnet test --filter "Category!=Integration"` for unit tests only
+- Test naming: `MethodName_Scenario_ExpectedBehavior`
 
-### Tools and IDEs
+### Containerization
 
-- **Visual Studio 2022** (Windows/macOS) -- full-featured IDE
-- **VS Code + C# Dev Kit** -- lightweight, cross-platform
-- **JetBrains Rider** -- cross-platform, popular for .NET development on macOS/Linux
-- **`dotnet` CLI** -- the universal tool for creating, building, testing, and publishing projects
-- **NuGet** -- the package manager. `dotnet add package {PackageName}` to add dependencies
-
-### Containerization and Deployment
-
-- **Docker** with official .NET images: `mcr.microsoft.com/dotnet/aspnet:9.0` for runtime, `mcr.microsoft.com/dotnet/sdk:9.0` for build
-- **Multi-stage Docker builds** for smaller images (build stage + runtime stage)
+- **Docker** with multi-stage builds: SDK for build, ASP.NET runtime for production
 - **Chiseled containers** for minimal attack surface
 - **Health check endpoints** (`/health`, `/health/ready`) for orchestrator integration
 
-## Repository Structure
-
-```
-dotnet-csharp-backend/
-├── README.md              # This guide -- comprehensive .NET backend fundamentals
-├── AGENTS.md              # This file -- context and guidelines for contributors
-└── src/                   # (Future) Sample projects and exercises
-    ├── 01-minimal-api/    # Entry-level: Build your first API
-    ├── 02-ef-core/        # Entry/Mid-level: Database access with EF Core
-    ├── 03-auth/           # Mid-level: Authentication and authorization
-    ├── 04-testing/        # Mid-level: Unit and integration testing
-    └── 05-advanced/       # Senior-level: Performance, distributed systems
-```
-
-The `src/` directory is planned for future sample projects. When creating exercises, follow the numbered convention and include a README.md in each subdirectory with instructions, learning objectives, and difficulty badges.
-
 ## Making Changes
 
-When updating this repository:
-
-1. **README.md changes:** Ensure all code examples compile against .NET 9. Verify API references against [learn.microsoft.com](https://learn.microsoft.com/dotnet). Keep the word count in the 3000-4000 range for the main guide.
-2. **New content:** Use `[Entry]`, `[Mid]`, `[Senior]` badges. Include runnable code examples. Prefer minimal APIs and modern C# features.
-3. **Code quality:** Run `dotnet build` and `dotnet test` on any sample projects before committing.
-4. **Links:** Prefer official Microsoft documentation links over blog posts. Ensure all URLs are valid.
-5. **Style:** No emojis in content. Use tables, code blocks, and Mermaid diagrams for clarity. Keep language direct and technical.
+1. Ensure all code examples compile against .NET 9
+2. Verify API references against [learn.microsoft.com](https://learn.microsoft.com/dotnet)
+3. Keep each file between 200-500 words. Short, concise, direct
+4. Use `[Entry]`, `[Mid]`, `[Senior]` badges. Include runnable code examples
+5. Prefer minimal APIs and modern C# features
+6. Run `dotnet build` and `dotnet test` on any sample projects before committing
+7. Prefer official Microsoft documentation links over blog posts
+8. No emojis. Use tables, code blocks for clarity. Direct and technical
