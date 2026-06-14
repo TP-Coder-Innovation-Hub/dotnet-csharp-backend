@@ -1,4 +1,4 @@
-# Capstone: Payroll & Benefits Management System
+# Workshop: Payroll & Benefits Management System
 
 > **Roadmap:** dotnet-csharp-backend
 > **Challenge Repo:** https://github.com/TP-Coder-Innovation-Hub/payroll-and-benefits-management-challenge
