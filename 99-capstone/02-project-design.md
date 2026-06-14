@@ -1,6 +1,6 @@
 # Workshop Design: Payroll & Benefits Management System
 
-> Companion to [01-capstone-spec.md](./01-capstone-spec.md). Diagrams, contracts, schemas. The spec already fixes the Clean Architecture project layout (§8) — follow it; everything inside the layers is yours.
+> Companion to [01-workshop-spec.md](./01-workshop-spec.md). Diagrams, contracts, schemas. The spec already fixes the Clean Architecture project layout (§8) — follow it; everything inside the layers is yours.
 
 ## Design Notes (read first)
 
