@@ -235,7 +235,7 @@ Taxable Income          Rate
 
 **Decision:** Use `IHostedService` with `BackgroundService` base class and a timer/cron expression. Trigger payroll calculation for all active employees.
 
-**Consequence:** Simple in-process scheduling. For production, consider moving to Hangfire or Quartz for persistence and retry. Current approach suffices for capstone scope.
+**Consequence:** Simple in-process scheduling. For production, consider moving to Hangfire or Quartz for persistence and retry. Current approach suffices for workshop scope.
 
 ---
 
