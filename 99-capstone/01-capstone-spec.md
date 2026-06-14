@@ -245,7 +245,7 @@ Taxable Income          Rate
 
 **Decision:** Use REST calls (via `IHttpClientFactory`). Each service exposes internal endpoints for service-to-service calls.
 
-**Consequence:** Synchronous coupling — employee-service downtime blocks payroll. Acceptable for capstone scope. In production, consider caching or a service mesh.
+**Consequence:** Synchronous coupling — employee-service downtime blocks payroll. Acceptable for workshop scope. In production, consider caching or a service mesh.
 
 ---
 
