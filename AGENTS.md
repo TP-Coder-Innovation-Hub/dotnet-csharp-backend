@@ -50,7 +50,7 @@ dotnet-csharp-backend/
 │   ├── 01-testing.md                   #  xUnit, EF Core InMemory
 │   ├── 02-logging.md                   #  Structured logging, Serilog
 │   └── 03-deployment.md                #  Docker, Native AOT
-└── 05-capstone/
+└── 05-workshop/
     └── README.md                       #  Enterprise REST API project spec
 ```
 
