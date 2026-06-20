@@ -2,7 +2,7 @@
 
 > **Roadmap:** dotnet-csharp-backend
 > **Challenge Repo:** https://github.com/TP-Coder-Innovation-Hub/payroll-and-benefits-management-challenge
-> **Architecture:** 4 microservices | ASP.NET Core 8 | Clean Architecture
+> **Architecture:** 4 microservices | ASP.NET Core 9 | Clean Architecture
 
 ---
 
@@ -184,7 +184,7 @@ Taxable Income          Rate
 
 | Constraint | Requirement |
 |-----------|-------------|
-| Framework | ASP.NET Core 8+ (LTS) |
+| Framework | ASP.NET Core 9 (LTS) |
 | Architecture | Clean Architecture per service (Domain, Application, Infrastructure, Presentation) |
 | ORM | Entity Framework Core with code-first migrations |
 | Database | SQL Server (containerized) |
