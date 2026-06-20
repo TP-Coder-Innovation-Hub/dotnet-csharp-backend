@@ -27,6 +27,11 @@ A structured guide to building production-grade backend systems with .NET 9+ and
 | 03-03 | [Your First API](03-backend-fundamentals/03-your-first-api.md) |  | Minimal APIs step by step |
 | 03-04 | [Database Access](03-backend-fundamentals/04-database-access.md) |  | EF Core: code-first, migrations, queries |
 | 03-05 | [Authentication](03-backend-fundamentals/05-authentication.md) |  | JWT, ASP.NET Identity |
+| 03-06 | [Configuration](03-backend-fundamentals/06-configuration.md) |  | Options pattern, IOptions, validated config |
+| 03-07 | [Caching](03-backend-fundamentals/07-caching.md) |  | IMemoryCache, IDistributedCache, Redis, output caching |
+| 03-08 | [Background Services](03-backend-fundamentals/08-background-services.md) |  | IHostedService, BackgroundService, timed tasks |
+| 03-09 | [Messaging](03-backend-fundamentals/09-messaging.md) |  | MassTransit, RabbitMQ, publish/consume, outbox |
+| 03-10 | [Security Hardening](03-backend-fundamentals/10-security-hardening.md) |  | CORS, rate limiting, Data Protection, security headers |
 | 04-01 | [Testing](04-production/01-testing.md) |  | xUnit, testing handlers, EF Core InMemory |
 | 04-02 | [Logging](04-production/02-logging.md) |  | Structured logging, Serilog |
 | 04-03 | [Deployment](04-production/03-deployment.md) |  | Docker, Native AOT |
