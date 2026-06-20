@@ -46,9 +46,11 @@ After completing this path you will be able to:
 2. Write idiomatic C# 13 with LINQ, async/await, records, and pattern matching
 3. Build REST APIs with ASP.NET Core minimal APIs
 4. Persist data with EF Core (code-first, migrations, LINQ-to-SQL)
-5. Secure endpoints with JWT authentication
-6. Test with xUnit and deploy with Docker
-7. Make informed technology choices (.NET vs Java vs Go vs Node)
+5. Secure endpoints with JWT authentication, CORS, and rate limiting
+6. Use caching, background services, and async messaging (MassTransit)
+7. Integrate with SPA frontends (SignalR, OpenAPI clients, SPA hosting)
+8. Test with xUnit and deploy with Docker
+9. Make informed technology choices (.NET vs Java vs Go vs Node)
 
 ## Audience
 
