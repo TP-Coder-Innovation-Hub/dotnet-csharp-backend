@@ -155,6 +155,33 @@ var headerPolicy = new HeaderPolicyCollection()
 app.UseSecurityHeaders(headerPolicy);
 ```
 
+## Middleware Pipeline Order
+
+The order of middleware matters. A request passes through each layer in sequence. Getting the order wrong causes CORS errors, auth failures, or rate limits that don't work.
+
+```mermaid
+flowchart TD
+    R[Incoming Request] --> SH["Security Headers<br/>(HSTS, CSP, nosniff)"]
+    SH --> CORS[UseCors]
+    CORS --> RL[UseRateLimiter]
+    RL --> AUTH[UseAuthentication]
+    AUTH --> AUTHZ[UseAuthorization]
+    AUTHZ --> EP[Endpoint Handler]
+    EP --> RES[Response]
+```
+
+```csharp
+var app = builder.Build();
+
+app.UseSecurityHeaders();     // 1. Security headers on every response
+app.UseCors();                // 2. CORS BEFORE auth
+app.UseRateLimiter();         // 3. Rate limiting
+app.UseAuthentication();      // 4. Who are you?
+app.UseAuthorization();       // 5. Are you allowed?
+
+app.MapGet("/api/data", () => ...).RequireAuthorization();
+```
+
 ## Common Mistakes
 
 - **CORS before auth middleware.** Pipeline order matters: `UseCors()` must come before `UseAuthentication()` and `UseAuthorization()`.
