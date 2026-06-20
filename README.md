@@ -35,7 +35,8 @@ A structured guide to building production-grade backend systems with .NET 9+ and
 | 04-01 | [Testing](04-production/01-testing.md) |  | xUnit, testing handlers, EF Core InMemory |
 | 04-02 | [Logging](04-production/02-logging.md) |  | Structured logging, Serilog |
 | 04-03 | [Deployment](04-production/03-deployment.md) |  | Docker, Native AOT |
-| 05-00 | [Workshop Project](05-workshop/README.md) |  | Enterprise REST API spec |
+| 04-04 | [Full-Stack Integration](04-production/04-full-stack-integration.md) |  | SignalR, OpenAPI clients, SPA static files, JWT cookies |
+| 05-00 | [Progressive Workshops](99-workshop/01-workshop-foundation.md) |  | 5 workshops: CLI → Database → API → Production → Final |
 
 ## Objectives
 
