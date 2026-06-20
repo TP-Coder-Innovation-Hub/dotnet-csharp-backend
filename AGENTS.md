@@ -45,13 +45,26 @@ dotnet-csharp-backend/
 │   ├── 02-rest-api-design.md           #  REST principles, status codes
 │   ├── 03-your-first-api.md            #  Minimal APIs step by step
 │   ├── 04-database-access.md           #  EF Core: code-first, migrations
-│   └── 05-authentication.md            #  JWT, ASP.NET Identity
+│   ├── 05-authentication.md            #  JWT, ASP.NET Identity
+│   ├── 06-configuration.md             #  Options pattern, IOptions, validated config
+│   ├── 07-caching.md                   #  IMemoryCache, IDistributedCache, Redis
+│   ├── 08-background-services.md       #  IHostedService, BackgroundService, timed tasks
+│   ├── 09-messaging.md                 #  MassTransit, RabbitMQ, outbox
+│   └── 10-security-hardening.md        #  CORS, rate limiting, Data Protection, headers
 ├── 04-production/
 │   ├── 01-testing.md                   #  xUnit, EF Core InMemory
 │   ├── 02-logging.md                   #  Structured logging, Serilog
-│   └── 03-deployment.md                #  Docker, Native AOT
-└── 05-workshop/
-    └── README.md                       #  Enterprise REST API project spec
+│   ├── 03-deployment.md                #  Docker, Native AOT
+│   └── 04-full-stack-integration.md    #  SignalR, OpenAPI clients, SPA hosting
+├── 05-workshop/
+│   └── README.md                       #  Navigation to progressive workshops
+└── 99-workshop/
+    ├── 01-workshop-foundation.md       #  W1: Thai Tax Calculator CLI
+    ├── 02-workshop-data-layer.md       #  W2: Employee Records Database
+    ├── 03-workshop-api-layer.md        #  W3: Payroll API
+    ├── 04-workshop-production.md       #  W4: Payslip PDF Service
+    ├── 05-final-workshop-spec.md       #  W5: Payroll & Benefits Management System
+    └── 06-project-design.md            #  Final workshop design docs
 ```
 
 ## How to Help
