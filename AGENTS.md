@@ -100,6 +100,11 @@ dotnet-csharp-backend/
 6. **EF Core as the standard ORM** -- Code-first, migrations, LINQ-to-SQL translation
 7. **Native AOT for specific scenarios** -- Cold-start-sensitive serverless, edge deployments
 8. **Testing with xUnit** -- Unit tests, `WebApplicationFactory` for integration tests
+9. **Options pattern for configuration** -- `IOptions<T>`, validated options, never hardcode config
+10. **Cache-aside with IDistributedCache** -- Redis for multi-instance, `IMemoryCache` for single-instance
+11. **BackgroundService for async work** -- Scoped services via `IServiceScopeFactory`, `PeriodicTimer` for scheduling
+12. **MassTransit for messaging** -- RabbitMQ/Azure Service Bus, transactional outbox, idempotent consumers
+13. **CORS and rate limiting middleware** -- Built-in rate limiter (.NET 7+), specific origins only, Data Protection keys in Redis
 
 ## .NET Guidelines (2026)
 
