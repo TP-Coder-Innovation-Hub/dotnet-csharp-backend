@@ -6,12 +6,15 @@
 
 ASP.NET Core loads configuration from multiple sources in a layered order. Later sources override earlier ones:
 
-```text
-1. appsettings.json
-2. appsettings.{Environment}.json
-3. User secrets (Development only)
-4. Environment variables
-5. Command-line args
+```mermaid
+flowchart BT
+    A["appsettings.json<br/>(base values)"] --> B["appsettings.{Env}.json<br/>(env-specific)"]
+    B --> C["User Secrets<br/>(Dev only)"]
+    C --> D["Environment Variables<br/>(Docker, K8s)"]
+    D --> E["Command-line Args<br/>(highest priority)"]
+
+    style A fill:#f9f,stroke:#333
+    style E fill:#ff9,stroke:#333,stroke-width:2px
 ```
 
 ## Strongly-Typed Configuration: IOptions<T>
